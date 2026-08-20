@@ -1,0 +1,7 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+    <header>{% include "partials/header.njk" %}</header>
+    <main tabindex="-1" id="main-content">{{ content | safe }}</main>
+    <footer>{% include "partials/footer.njk" %}</footer>
+{% endblock %}
