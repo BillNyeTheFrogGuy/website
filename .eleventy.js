@@ -5,10 +5,14 @@ import { RenderPlugin } from "@11ty/eleventy";
 
 export default function (eleventyConfig) {
 	
+  eleventyConfig.addPlugin(RenderPlugin);
+  eleventyConfig.addTemplateFormats('scss');
+
   // Set directories to pass through to the dist folder
   eleventyConfig.addPassthroughCopy("content/images");
   eleventyConfig.addPassthroughCopy("content/lisences");
-  eleventyConfig.addPassthroughCopy("css/fonts");
+  eleventyConfig.addPassthroughCopy("content/css/fonts");
+  eleventyConfig.addPassthroughCopy("content/bundle.css");
 
   
   return {
@@ -43,8 +47,7 @@ export default function (eleventyConfig) {
 	},
     
   });
-  eleventyConfig.addPlugin(RenderPlugin);
-  eleventyConfig.addTemplateFormats('scss');
+
 
   eleventyConfig.addTransform("htmlmin", function (content) {
     if ((this.page.outputPath || "").endsWith(".html")) {

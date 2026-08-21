@@ -1,10 +1,7 @@
-{% set assetHash = global.random() %}
-
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
-		<script src="example.js{{ nocache }}"></script>
-        <link rel="stylesheet" href="example.css{{ nocache }}" />
+        <link rel="stylesheet" href="{{ stylesheet }}{{ nocache }}" />
         <meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>{{ title }} | Daniel Lazzaretto</title>

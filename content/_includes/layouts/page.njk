@@ -1,7 +1,15 @@
+---
+stylesheet: "/bundle.css"
+---
+
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-    <header>{% include "partials/header.njk" %}</header>
-    <main tabindex="-1" id="main-content">{{ content | safe }}</main>
+<div class="flex-wrapper">
+    <div class="content-width">
+        <header>{% include "partials/header.njk" %}</header>
+        <main tabindex="-1" id="main-content"><h2>{{ title }}</h2><br>{{ content | safe }}</main>
+    </div>    
     <footer>{% include "partials/footer.njk" %}</footer>
+</div>
 {% endblock %}

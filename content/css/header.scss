@@ -1,0 +1,41 @@
+header{
+    max-width: 1200px;
+    margin: auto; 
+    overflow: hidden;
+}
+h1{
+    width: 100%;
+}
+header ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0B321B;
+}
+header ul li {
+  float: left;
+  border: #0B321B;
+  border-radius: 25%;
+  border-color: #0B321B;
+}
+
+header ul li a:link {
+  color: white;
+  display: block;
+  text-align: center;
+  padding: 0.75em;
+  text-decoration: none;
+}
+
+header ul li a:visited {
+    color:white;
+}
+
+header ul li a:hover {
+  background-color: #166435;
+}
+
+header ul li a.active {
+    background-color: #166435;
+}
