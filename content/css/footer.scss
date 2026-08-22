@@ -5,7 +5,14 @@ footer{
     margin-top: auto;
     text-align: center;
     font-size: smaller;
+    font-family: "IBM Plex Mono", serif;
+    border-top-style: double;
+    border-color: #0B321B;
+}
 
+footer hr {
+    padding-top: 0;
+    margin-top: 0;
 }
 
 a:link{

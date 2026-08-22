@@ -1,8 +1,29 @@
 
+/* dongle-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Dongle";
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/dongle-v16-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ibm-plex-mono-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/ibm-plex-mono-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 body {
   margin: 0px;
   //overflow: hidden;
+}
+hr.transparent {
+  color: rgba(0,0,0,0);
+  padding: 0;
+  margin: 0;
 }
 .flex-wrapper {
   display: flex;
@@ -29,29 +50,51 @@ a:active {
 ul{
   list-style: none;
 }
+
 header{
-    max-width: 1200px;
+    max-width: 66rem;
     margin: auto; 
     overflow: hidden;
 }
+@media only screen and (max-width: 550px) { 
+  img.header-thing { 
+    display: none; 
+  } 
+}
 h1{
     width: 100%;
+    font-family: "Dongle", sans-serif;
+    line-height: 0.5;
+    font-size: 6.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    padding-left: -1rem;
+    margin-left: 0;
 }
-header ul{
+h1 a:hover{
+    text-decoration: none;
+}
+h3{
+    margin-top: 0;
+    padding-left: 0.5rem;
+    font-family: "IBM Plex Mono", serif;
+    font-size: 1.2rem;
+}
+header nav ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #0B321B;
 }
-header ul li {
+header nav ul li {
   float: left;
   border: #0B321B;
   border-radius: 25%;
   border-color: #0B321B;
 }
 
-header ul li a:link {
+header nav ul li a:link {
   color: white;
   display: block;
   text-align: center;
@@ -59,21 +102,33 @@ header ul li a:link {
   text-decoration: none;
 }
 
-header ul li a:visited {
+header nav ul li a:visited {
     color:white;
 }
 
-header ul li a:hover {
+header nav ul li a:hover {
   background-color: #166435;
 }
 
-header ul li a.active {
+header nav ul li a.active {
     background-color: #166435;
 }
 main{
     background-color: white;
     margin: auto;
-    max-width: 1200px;
+    max-width: 66rem;
+}
+@media only screen and (max-width: 550px) { 
+  main { 
+    margin-left: 1rem;
+    margin-right: 1rem; 
+  }
+} 
+table{
+    width: 100%;
+}
+td{
+    text-align: left;
 }
 footer{
     //width: 100vw;
@@ -82,7 +137,14 @@ footer{
     margin-top: auto;
     text-align: center;
     font-size: smaller;
+    font-family: "IBM Plex Mono", serif;
+    border-top-style: double;
+    border-color: #0B321B;
+}
 
+footer hr {
+    padding-top: 0;
+    margin-top: 0;
 }
 
 a:link{

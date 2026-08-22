@@ -1,7 +1,28 @@
+/* dongle-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Dongle";
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/dongle-v16-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* ibm-plex-mono-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/ibm-plex-mono-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 body {
   margin: 0px;
   //overflow: hidden;
+}
+hr.transparent {
+  color: rgba(0,0,0,0);
+  padding: 0;
+  margin: 0;
 }
 .flex-wrapper {
   display: flex;

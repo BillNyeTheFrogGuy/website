@@ -11,7 +11,7 @@ export default function (eleventyConfig) {
   // Set directories to pass through to the dist folder
   eleventyConfig.addPassthroughCopy("content/images");
   eleventyConfig.addPassthroughCopy("content/lisences");
-  eleventyConfig.addPassthroughCopy("content/css/fonts");
+  eleventyConfig.addPassthroughCopy("content/fonts");
   eleventyConfig.addPassthroughCopy("content/bundle.css");
 
   
