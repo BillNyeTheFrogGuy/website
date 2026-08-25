@@ -2,3 +2,18 @@
 layout: "layouts/page.njk"
 title: Calendar
 ---
+
+<ul class="calendar">
+    {% for item in events.items %}
+    <li>
+        <div>
+        <h4>{{item.title}}</h4>
+        <p>{{item.date}}<br>
+        {{item.info}}</p>
+        </div>
+        {% if item.link %}
+        <a href="{{item.link}}" target="_blank">Link</a>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>

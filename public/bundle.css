@@ -15,10 +15,19 @@
   font-weight: 400;
   src: url('../fonts/ibm-plex-mono-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+/* nunito-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/nunito-v32-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 body {
   margin: 0px;
   //overflow: hidden;
+  font-size: 14pt;
 }
 hr.transparent {
   color: rgba(0,0,0,0);
@@ -86,6 +95,7 @@ header nav ul{
     padding: 0;
     overflow: hidden;
     background-color: #0B321B;
+    font-family: "Nunito", sans-serif;
 }
 header nav ul li {
   float: left;
@@ -117,6 +127,16 @@ main{
     background-color: white;
     margin: auto;
     max-width: 66rem;
+    font-family: "Nunito", sans-serif;
+}
+h2{
+  font-size: 2rem;
+}
+h4{
+  font-size: 1.4rem;
+}
+h5{
+  font-size: 1.2rem;
 }
 @media only screen and (max-width: 550px) { 
   main { 
@@ -130,13 +150,47 @@ table{
 td{
     text-align: left;
 }
+iframe{
+  padding: 1rem;
+}
+ul.calendar{
+  li{
+    border-top-style: solid;
+    border-width: 2px;
+    padding: 1rem;
+    display: flex;
+    max-width: 100%;
+  }
+  li:last-child{
+    border-bottom-style: solid;
+    border-width: 2px;
+  }
+  p{
+    justify-content: flex-start;
+    margin: 0;
+  }
+  a{
+    justify-content: flex-end;
+    align-items: center;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    background-color: #E9FEF3;
+    padding: 0.3rem 0.5rem;
+    margin: auto 0 auto auto;
+  }
+  h4{
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+}
 footer{
     //width: 100vw;
     color: #0B321B;
     background-color: #FFF5EB;
     margin-top: auto;
     text-align: center;
-    font-size: smaller;
+    font-size: 0.75rem;
     font-family: "IBM Plex Mono", serif;
     border-top-style: double;
     border-color: #0B321B;
